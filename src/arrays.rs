@@ -1,3 +1,5 @@
+use std::io;
+
 pub fn arrays() {
     // Initialize an array that contains 5 elements with the same initial value
     let default_value_arr = [3; 5];
@@ -17,5 +19,24 @@ pub fn arrays() {
         println!("{value}");
     } else {
         println!("Index {i} is out of bounds (length is {})", arr.len());
+    }
+
+    println!(
+        "Please provide an index number between 0 - {}",
+        arr.len() - 1
+    );
+    let mut selected = String::new();
+    io::stdin()
+        .read_line(&mut selected)
+        .expect("Failed to read input");
+    match selected.trim().parse::<usize>() {
+        Ok(index) => {
+            if let Some(value) = arr.get(index) {
+                println!("{}", value);
+            } else {
+                println!("Index {index} is out of bounds")
+            }
+        }
+        Err(_) => println!("Failed to parse"),
     }
 }
