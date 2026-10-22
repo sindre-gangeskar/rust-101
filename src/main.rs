@@ -1,5 +1,6 @@
 use std::io;
 
+mod arrays;
 mod guessing_game;
 mod shadowing;
 mod tuples;
@@ -21,5 +22,6 @@ fn main() -> io::Result<()> {
     variables::variables();
     shadowing::shadowing();
     tuples::tuples();
+    arrays::arrays();
     Ok(())
 }
