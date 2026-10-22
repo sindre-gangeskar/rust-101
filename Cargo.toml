@@ -1,0 +1,11 @@
+[package]
+name = "rust-api"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "rust-api"
+path = "src/main.rs"
+
+[dependencies]
+rand = "0.10.3"
