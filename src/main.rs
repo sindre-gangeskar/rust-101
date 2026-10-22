@@ -1,6 +1,5 @@
 use std::io;
 
-use crate::guessing_game::game;
 mod guessing_game;
 mod shadowing;
 mod variables;
@@ -17,7 +16,7 @@ fn main() -> io::Result<()> {
     };
 
     if !will_skip {
-        game()?;
+        guessing_game::game()?;
     }
     variables::variables();
     shadowing::shadowing();

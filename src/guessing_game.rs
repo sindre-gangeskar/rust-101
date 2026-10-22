@@ -3,7 +3,7 @@ use std::{cmp::Ordering, io};
 pub fn game() -> io::Result<()> {
     println!("Guess the number between 1-10");
     loop {
-        let correct_number: u32 = rand::random_range(0..=10);
+        let correct_number: u32 = rand::random_range(1..=10);
         let mut guess = String::new();
         println!("The actual answer is: {:?}", correct_number);
 
