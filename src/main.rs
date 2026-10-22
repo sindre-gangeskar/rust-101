@@ -2,8 +2,8 @@ use std::io;
 
 mod guessing_game;
 mod shadowing;
+mod tuples;
 mod variables;
-
 fn main() -> io::Result<()> {
     let mut skip_guessing_game = String::new();
 
@@ -20,5 +20,6 @@ fn main() -> io::Result<()> {
     }
     variables::variables();
     shadowing::shadowing();
+    tuples::tuples();
     Ok(())
 }
